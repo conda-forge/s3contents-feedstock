@@ -1,22 +1,18 @@
 {% set name = "s3contents" %}
-{% set version = "0.2.2" %}
-{% set file_ext = "tar.gz" %}
-{% set hash_type = "sha256" %}
-{% set hash_value = "ab8904b0e4881dd3be0e030e39035d9f2ea45e162bb8bee88faf576df9897e47" %}
+{% set version = "0.1.12" %}
 
 package:
   name: '{{ name|lower }}'
   version: '{{ version }}'
 
 source:
-  fn: '{{ name }}-{{ version }}.{{ file_ext }}'
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ file_ext }}
-  '{{ hash_type }}': '{{ hash_value }}'
+  fn: '{{ name }}-{{ version }}.tar.gz'
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: d4512c31067befef6ac59a54c84aa7bbac8e6e8c646f31f5929e1f3de22218fc
 
 build:
   number: 0
-  # skipped on windows due to an issue in the library itself
-  skip: True  # [win]
+  noarch: python
   script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
