@@ -1,5 +1,5 @@
 {% set name = "s3contents" %}
-{% set version = "0.1.13" %}
+{% set version = "0.3.0" %}
 
 package:
   name: '{{ name|lower }}'
@@ -8,7 +8,7 @@ package:
 source:
   fn: '{{ name }}-{{ version }}.tar.gz'
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 0a7abcdaeed51100bdc6dc090141ff8a9061d01a60210443183c1fe9df0612d6
+  sha256: a0cdfb09207f249f55fbad571685408999226798552fef25d02b5208ab8d0069
 
 build:
   number: 0
