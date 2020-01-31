@@ -17,10 +17,10 @@ build:
 
 requirements:
   host:
-    - python
+    - python>=3
     - pip
   run:
-    - python
+    - python>=3
     - jupyter
     - boto3
     - requests
