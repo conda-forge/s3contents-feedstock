@@ -11,7 +11,7 @@ source:
   sha256: 648c956859d6d3a9a83d214b39654a490d34c8a3829d79c3ad316ef5fd8ba821
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
@@ -21,11 +21,12 @@ requirements:
     - pip
   run:
     - python >=3
-    - jupyter
-    - boto3
+    - notebook
     - requests
-    - s3fs
-    - gcsfs
+    - boto3
+    - s3fs >=0.3.4
+    - gcsfs >=0.2.1
+    - nose
 
 test:
   requires:
@@ -56,3 +57,4 @@ extra:
   recipe-maintainers:
     - mariusvniekerk
     - danielfrg
+    - ericdill
