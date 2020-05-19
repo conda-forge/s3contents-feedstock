@@ -125,5 +125,6 @@ Feedstock Maintainers
 =====================
 
 * [@danielfrg](https://github.com/danielfrg/)
+* [@ericdill](https://github.com/ericdill/)
 * [@mariusvniekerk](https://github.com/mariusvniekerk/)
 
