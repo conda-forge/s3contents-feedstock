@@ -43,7 +43,7 @@ about:
   license_family: APACHE
   license_file: LICENSE.txt
   summary: A S3-backed ContentsManager implementation for Jupyter
-  description: |4
+  description:
 
     A S3 and GCS backed ContentsManager implementation for Jupyter.
 
