@@ -11,15 +11,8 @@ Summary: A S3-backed ContentsManager implementation for Jupyter
 
 Development: https://github.com/danielfrg/s3contents
 
-
 A S3 and GCS backed ContentsManager implementation for Jupyter.
-
-It aims to a be a transparent, drop-in replacement for Jupyter standard
-filesystem-backed storage system. With this implementation of a Jupyter
-Contents Manager you can save all your notebooks, regular files, directories
-structure directly to a S3/GCS bucket, this could be on AWS/GCP or a self
-hosted S3 API compatible like minio.
-
+It aims to a be a transparent, drop-in replacement for Jupyter standard filesystem-backed storage system. With this implementation of a Jupyter Contents Manager you can save all your notebooks, regular files, directories structure directly to a S3/GCS bucket, this could be on AWS/GCP or a self hosted S3 API compatible like minio.
 
 Current build status
 ====================
@@ -48,6 +41,7 @@ Installing `s3contents` from the `conda-forge` channel can be achieved by adding
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
 Once the `conda-forge` channel has been enabled, `s3contents` can be installed with:
