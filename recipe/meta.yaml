@@ -1,5 +1,5 @@
 {% set name = "s3contents" %}
-{% set version = "0.6.3" %}
+{% set version = "0.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d612f650263a676ae01dd2fa9abb4d6f6d6e84e7c83c2188dc2808d36866e3be
+  sha256: affd70964af185ceac3c36eb6d920ab23c333b85fcd6079dd4961a78ad47e6dc
 
 build:
   number: 0
@@ -43,15 +43,8 @@ about:
   license_family: APACHE
   license_file: LICENSE.txt
   summary: A S3-backed ContentsManager implementation for Jupyter
-  description:
-
-    A S3 and GCS backed ContentsManager implementation for Jupyter.
-
-    It aims to a be a transparent, drop-in replacement for Jupyter standard
-    filesystem-backed storage system. With this implementation of a Jupyter
-    Contents Manager you can save all your notebooks, regular files, directories
-    structure directly to a S3/GCS bucket, this could be on AWS/GCP or a self
-    hosted S3 API compatible like minio.
+  description: "A S3 and GCS backed ContentsManager implementation for Jupyter.\nIt aims to a be a transparent, drop-in replacement for Jupyter standard filesystem-backed storage system. With this implementation of a Jupyter Contents Manager you can save all your notebooks, regular files, directories structure directly to\
+    \ a S3/GCS bucket, this could be on AWS/GCP or a self hosted S3 API compatible like minio."
   dev_url: https://github.com/danielfrg/s3contents
 
 extra:
