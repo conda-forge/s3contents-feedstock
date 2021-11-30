@@ -20,6 +20,8 @@ requirements:
     - python >=3
     - pip
     - setuptools_scm
+  build:
+    - poetry
   run:
     - python >=3
     - aiobotocore >=1.4.0
