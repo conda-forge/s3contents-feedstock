@@ -21,6 +21,7 @@ requirements:
   host:
     - python >=3
     - pip
+    - poetry
     - setuptools_scm
   run:
     - python >=3
