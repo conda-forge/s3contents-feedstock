@@ -1,5 +1,5 @@
 {% set name = "s3contents" %}
-{% set version = "0.7.0" %}
+{% set version = "0.9.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,31 +8,34 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: affd70964af185ceac3c36eb6d920ab23c333b85fcd6079dd4961a78ad47e6dc
+  sha256: 99078f29c286df7311d6d0e1f10a39035bb08455c5dd106cde6c3a836f2e2a77
 
 build:
   number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
   noarch: python
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
+  build:
+    - poetry
   host:
     - python >=3
     - pip
+    - poetry
     - setuptools_scm
   run:
     - python >=3
-    - notebook
-    - requests
+    - aiobotocore >=1.4.0
     - boto3
-    - s3fs >=0.3.4,<0.5.1
-    - gcsfs >=0.2.1
-    - nose
+    - notebook
+    - s3fs >=2021.11.0,<2022.0.0
+    - gcsfs >=2021.11.0,<2022.0.0
 
 test:
   requires:
-    - nose
     - mock
+    - nose
+    - pytest
   imports:
     - s3contents
     - s3contents.tests
