@@ -17,12 +17,11 @@ build:
 
 requirements:
   build:
-    - poetry
+    - hatch
   host:
     - python >=3
     - pip
-    - poetry
-    - setuptools_scm
+    - hatch
   run:
     - python >=3
     - aiobotocore >=1.4.0
