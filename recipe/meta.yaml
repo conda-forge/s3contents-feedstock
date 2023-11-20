@@ -24,7 +24,7 @@ requirements:
     - hatch
   run:
     - python >=3
-    - aiobotocore >=2.5.4
+    - aiobotocore >=2.5.0
     - boto3
     - notebook
     - s3fs >=2021.0.0,<=2023.0.0
