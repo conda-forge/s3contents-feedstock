@@ -11,25 +11,24 @@ source:
   sha256: cfcf6c56d9758ee6503b7aff16a7ec39ce1f5bcd1f743755636924b0939c166e
 
 build:
-  number: 0
+  number: 5
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
   noarch: python
 
 requirements:
   build:
-    - poetry
+    - hatch
   host:
     - python >=3
     - pip
-    - poetry
-    - setuptools_scm
+    - hatch
   run:
     - python >=3
-    - aiobotocore >=1.4.0
+    - aiobotocore >=2.5.0
     - boto3
     - notebook
-    - s3fs >=2021.11.0,<2022.0.0
-    - gcsfs >=2021.11.0,<2022.0.0
+    - s3fs >=2021.0.0,<=2023.0.0
+    - gcsfs >=2021.0.0,<=2023.0.0
 
 test:
   requires:
