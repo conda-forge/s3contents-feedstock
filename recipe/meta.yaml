@@ -7,11 +7,11 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: cfcf6c56d9758ee6503b7aff16a7ec39ce1f5bcd1f743755636924b0939c166e
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
   noarch: python
 
@@ -19,12 +19,12 @@ requirements:
   build:
     - poetry
   host:
-    - python >=3
+    - python {{ python_min }}
     - pip
     - poetry
     - setuptools_scm
   run:
-    - python >=3
+    - python >={{ python_min }}
     - aiobotocore >=1.4.0
     - boto3
     - notebook
@@ -36,6 +36,7 @@ test:
     - mock
     - nose
     - pytest
+    - python {{ python_min }}
   imports:
     - s3contents
     - s3contents.tests
