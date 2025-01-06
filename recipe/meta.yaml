@@ -25,8 +25,9 @@ requirements:
     - aiobotocore >=1.4.0
     - boto3
     - notebook
-    - s3fs >=2021.11.0,<2022.0.0
-    - gcsfs >=2021.11.0,<2022.0.0
+    - s3fs >=2021.11.0
+    - gcsfs >=2021.11.0
+    - nbconvert >=6.0,<8.0
 
 test:
   requires:
