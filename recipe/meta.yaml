@@ -16,13 +16,10 @@ build:
   noarch: python
 
 requirements:
-  build:
-    - poetry
   host:
     - python {{ python_min }}
     - pip
-    - poetry
-    - setuptools_scm
+    - hatchling
   run:
     - python >={{ python_min }}
     - aiobotocore >=1.4.0
